@@ -6,9 +6,9 @@
         <form action="{{ route('flower') }}" method="post" class="w-4/12">
             @csrf
             <div class="m-3">
-                <label for="flower">Flower: </label>
-                <input type="text" name="flower"
-                       id="flower"
+                <label for="name">Flower name: </label>
+                <input type="text" name="name"
+                       id="name"
                        placeholder="Enter a flower"
                        class="bg-gray-100 border-2 w-full p-4 rounded-lg">
             </div>
@@ -22,7 +22,8 @@
             </div>
             <div>
                 <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded
-                     font-medium w-full">Submit</button>
+                     font-medium w-full">Submit
+                </button>
             </div>
         </form>
     </div>

@@ -10,7 +10,7 @@ class Flower extends Model
     use HasFactory;
 
     protected $fillable = [
-        'flower',
+        'name',
         'color',
     ];
 }

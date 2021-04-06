@@ -15,13 +15,21 @@ class FlowerController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'flower' => 'required',
+            'name' => 'required',
             'color' => 'required',
         ]);
-        $flower = new Flower;
-        $flower.name = $request->flower;
 
 
+        Flower::create([
+            'name' => $request->name,
+            'color' => $request->color,
+        ]);
+
+        $flowers = Flower::get();
+
+        return view('index', [
+            'flowers' => $flowers,
+        ]);
     }
 }
 

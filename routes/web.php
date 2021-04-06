@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FlowerController;
+use App\Http\Controllers\FlowerDisplayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+Route::get('/', [FlowerDisplayController::class, 'index']);
 
 Route::get('/flower', [FlowerController::class, 'index'])->name('flower');
 
